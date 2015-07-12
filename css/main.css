@@ -17,6 +17,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     background: #1c5a7c;
     color: #f3ebab;
+    background: url(../img/page-bg.png) ;
 }
 
 a {
@@ -103,11 +104,42 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* 
-==============
-STRUCTURE
-==============
-*/
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 0 1em 0;
+}
+
+    .header-main > * {
+        margin: 0.1em;
+    }
+
+    .icon-logo {
+        font-size: 7em;
+        order: 2;
+    }
+
+    .header-title {
+        order: 3;
+    }
+
+    .header-title h1 {
+        margin: 0;
+    }
+
+    .header-title .pronounciation {
+        font-size: 1.3em;
+        opacity: .5;
+    }
+
+    .establishment-date {
+        text-transform: uppercase;
+        border-top: solid 2px;
+        border-bottom: solid 2px;
+        order: 1;
+    }
+
 
 .content {
     display: flex;
@@ -117,11 +149,6 @@ STRUCTURE
     .content > * {
         padding: 0.5em;
     }
-
-    /* .content > * > * > * {
-        border: #f3ebab solid 1px;
-        padding: 1em;
-    } */
 
 
 .section__title {
@@ -174,22 +201,37 @@ STRUCTURE
     }
 
     .simple-shadow--dark {
-        text-shadow: 2px 2px #1c5a7c;
+        text-shadow: 2px 2px rgba(0,0,0,.3);
     }
 
-.section__card--group {
+.section__card-group {
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-    .section__card--group > * {
+    .section__card-group > * {
         display: block;
         padding: 1.5em;
         margin: 1em;
         background-color: #f3ebab;
         color: #1c5a7c;
         box-shadow: 6px 6px rgba(0, 0, 0, 0.2);
+    }
+
+
+.section__group {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+    .section__group > * {
+        display: block;
+        margin: 1em;
+        padding: 1.5em;
+        color: #f3ebab;
+        /* box-shadow: 6px 6px rgba(0, 0, 0, 0.2); */
     }
 
 
@@ -259,6 +301,11 @@ STRUCTURE
         background-size: cover;
     }
 
+    .process__profit {
+        background: url(../img/happiness.png) center no-repeat ;
+        background-size: cover;
+    }
+
     .process ol li {
         text-align: center;
         position: relative;
@@ -301,28 +348,82 @@ STRUCTURE
 
     .process ol li .feature-icon {
         line-height: 1em;
+        z-index: 1;
     }
 
-
-.services ul li strong {
-    font-size: 1.4em;
-    line-height: 1em;
-    font-weight: bold;
+.services ul li {
+    flex-grow: 1;
+    flex-basis: 0;
 }
+    
+    .services ul li strong {
+        font-size: 1.4em;
+        line-height: 1em;
+        font-weight: bold;
+    }
 
     .services ul li .feature-icon {
-        font-size: 5em;
-        margin-bottom: -1em;
+        font-size: 6em;
+        margin-bottom: -.9em;
         opacity: 0.3;
-        
+        text-align: right;
+    }
+
+    .services__text {
+        text-align: left;
     }
 
 
-.contact {
-    display: flex;
+.cta-mega {
+    text-align: center;
+    padding: 4em 0;
+    background-color: rgba(0,0,0,.2);
+    border-top: solid 6px rgba(0,0,0,.1);
 }
 
-    .contact > * {
+    .cta-mega__inner {
+        border: dotted 4px;
+        padding: 1em;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .cta-mega__inner > * {
+        display: block;
+    }
+
+    .cta-mega__main {
+        font-size: 2em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+
+.footer {
+    display: flex;
+    font-size: .8em;
+    background-color: rgba(0,0,0,.4);
+    border-top: solid 6px rgba(0,0,0,.1);
+}
+
+    .icon-logo-icon {
+        font-size: 4em;
+    }
+
+    .cta-job {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        border: solid 1px;
+    }
+
+    .footer strong {
+        text-transform: uppercase;
+    }
+
+    .footer > * {
         padding: 1.5em;
         margin: 1em; 
     }
